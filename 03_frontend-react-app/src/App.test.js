@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("should render the App component", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const paragraphElement = screen.getByText(/Hello Docker/i);
+  expect(paragraphElement).toBeInTheDocument();
+});
+
+test("should render the App component", () => {
+  render(<App />);
+  const paragraphElement = screen.getByText(/Docker/i);
+  expect(paragraphElement).toBeInTheDocument();
 });
